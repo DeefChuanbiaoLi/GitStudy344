@@ -4,6 +4,8 @@
 package SortClass;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author ASUS-PC
@@ -11,7 +13,14 @@ import java.util.ArrayList;
  */
 public class Sort {
 	
-	public static void sort(ArrayList arr) {
+	public static void sort(List student) {
+//		Arrays.sort(arr);
+		
+		
+		
+		
+		
+		
 		
 	}
 }
