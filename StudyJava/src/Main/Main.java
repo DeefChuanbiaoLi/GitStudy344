@@ -1,8 +1,8 @@
+package Main;
 import java.util.ArrayList;
 
-/**
- * 
- */
+import SortClass.Sort;
+
 
 /**
  * @author ASUS-PC
@@ -21,12 +21,10 @@ public class Main {
 			arr.add(40);
 			arr.add(90);
 			arr.add(30);
-			sort(arr);
+			Sort.sort(arr);
 			
 	}
-	public static void sort(ArrayList arr) {
-		
-	}
+	
 	
 
 }
