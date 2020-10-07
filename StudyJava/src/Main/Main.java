@@ -17,14 +17,14 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Student> Student = new ArrayList<Student>();
+		List<Student> studs = new ArrayList<Student>();
 		Student stu1 = new Student("zhangsan",30);
         Student stu2 = new Student("lisi",80);
         Student stu3 = new Student("wangwu",90);
-        Student.add(stu1);
-        Student.add(stu2);
-        Student.add(stu3);
-        Sort.sort(Student);
+        studs.add(stu1);
+        studs.add(stu2);
+        studs.add(stu3);
+        Sort.sort(studs);
 		
 			
 	}
