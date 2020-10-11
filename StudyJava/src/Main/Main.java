@@ -1,7 +1,9 @@
 package Main;
 import java.util.ArrayList;
+import java.util.List;
 
 import SortClass.Sort;
+import Student.Student;
 
 
 /**
@@ -15,13 +17,15 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			ArrayList arr = new ArrayList();
-			arr.add(50);
-			arr.add(60);
-			arr.add(40);
-			arr.add(90);
-			arr.add(30);
-			Sort.sort(arr);
+		List<Student> studs = new ArrayList<Student>();
+		Student stu1 = new Student("zhangsan",30);
+        Student stu2 = new Student("lisi",80);
+        Student stu3 = new Student("wangwu",90);
+        studs.add(stu1);
+        studs.add(stu2);
+        studs.add(stu3);
+        Sort.sort(studs);
+		
 			
 	}
 	
