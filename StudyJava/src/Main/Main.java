@@ -2,8 +2,9 @@ package Main;
 import java.util.ArrayList;
 import java.util.List;
 
-import SortClass.Sort;
 import Student.Student;
+import TC.Biggest;
+import TC.Sort;
 
 
 /**
@@ -25,6 +26,7 @@ public class Main {
         studs.add(stu2);
         studs.add(stu3);
         Sort.sort(studs);
+       Biggest.biggest(studs);
 		
 			
 	}

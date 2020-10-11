@@ -1,7 +1,7 @@
 /**
  * 
  */
-package SortClass;
+package TC;
 
 import java.util.ArrayList;
 import java.util.Collections;
