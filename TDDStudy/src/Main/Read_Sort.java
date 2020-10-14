@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main;
+package Main;
 
 import java.util.ArrayList;
 
@@ -36,9 +36,7 @@ public class Read_Sort implements Read_Sort_Interface{
 		
 	}
 	public int[] sort(int[] array) {
-
 			return si.Sort(array);
-		
 	}
 
 }
