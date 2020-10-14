@@ -4,6 +4,10 @@
 package MainPac;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import entity.Student;
 
 /**
  * @author ASUS-PC
@@ -20,22 +24,28 @@ public class Read_Sort implements Read_Sort_Interface{
 		this.si = si;
 	}
 	@Override
-	public int[] Read_Sort(ArrayList list) {
+	public List Read_Sort(ArrayList list) {
 		// TODO Auto-generated method stub
 		//int[] array
-		int[] array = read(list);
-		return sort(array);
-		
-	}
-	public int[] read(ArrayList array) {
-		int[] array1 = new int[array.size()];
-		for(int i = 0;i<array.size();i++) {
-			array1[i]= (int)array.get(i);
+		ArrayList<Student> list01 = new ArrayList<Student>();
+		for(Student s:(ArrayList<Student>)list) {
+			//String s1=String.format("%4d",s.getEnglishScore());
+			list01.add(s);
+			System.out.println();
 		}
-		return array1;
+		
+		return sort(list01);
 		
 	}
-	public int[] sort(int[] array) {
+//	public int[] read(ArrayList array) {
+//		int[] array1 = new int[array.size()];
+//		for(int i = 0;i<array.size();i++) {
+//			array1[i]= (int)array.get(i);
+//		}
+//		return array1;
+//		
+//	}
+	public List sort(List array) {
 			return si.Sort(array);
 	}
 

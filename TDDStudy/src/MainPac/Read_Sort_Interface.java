@@ -4,11 +4,12 @@
 package MainPac;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author ASUS-PC
  *
  */
 public interface Read_Sort_Interface {
-	public abstract int[] Read_Sort(ArrayList array);
+	public abstract List Read_Sort(ArrayList array);
 }
