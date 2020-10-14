@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Main;
+package MainPac;
 
 /**
  * @author ASUS-PC

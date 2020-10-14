@@ -10,8 +10,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import Main.Read_Sort;
-import Main.Sort;
+import MainPac.Read_Sort;
+import MainPac.Sort;
 import entity.Student;
 
 /**
