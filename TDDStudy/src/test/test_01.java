@@ -38,7 +38,6 @@ public class test_01 {
 //		list.add(8);
 //		list.add(7);
 //		list.add(9);
-//		
 //		read_sort.setSi(new Sort());
 //		assertArrayEquals(new int[] {9,8,7},read_sort.Read_Sort(list));
 //		
@@ -55,8 +54,7 @@ public class test_01 {
 //		stus.add(stu1);
 //		stus.add(stu2);
 //		stus.add(stu3);
-//		stus.add(stu4);
-		
+//		stus.add(stu4);	
 //		read_sort.setSi(new Sort());
 //		assertArrayEquals(new int[] {9,8,7},read_sort.Read_Sort(stus));
 		

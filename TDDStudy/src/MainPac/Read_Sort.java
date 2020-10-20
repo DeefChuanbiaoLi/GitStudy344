@@ -24,11 +24,11 @@ public class Read_Sort implements Read_Sort_Interface{
 		this.si = si;
 	}
 	@Override
-	public List Read_Sort(ArrayList list) {
+	public ArrayList<Student> Read_Sort(List<Student> stus) {
 		// TODO Auto-generated method stub
 		//int[] array
 		ArrayList<Student> list01 = new ArrayList<Student>();
-		for(Student s:(ArrayList<Student>)list) {
+		for(Student s:(ArrayList<Student>)stus) {
 			//String s1=String.format("%4d",s.getEnglishScore());
 			list01.add(s);
 			System.out.println();
@@ -45,7 +45,7 @@ public class Read_Sort implements Read_Sort_Interface{
 //		return array1;
 //		
 //	}
-	public List sort(List array) {
+	public ArrayList<Student> sort(ArrayList<Student> array) {
 			return si.Sort(array);
 	}
 
