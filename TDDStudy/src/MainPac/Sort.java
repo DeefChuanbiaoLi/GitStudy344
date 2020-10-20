@@ -37,7 +37,7 @@ public class Sort implements Sort_Interface{
 			public int compare(final Student o1,final Student o2) {
 				// TODO Auto-generated method stub
 				int flag;
-				flag = (int) (o1.getEnglishScore()-o2.getEnglishScore());
+				flag = (int) (o1.getSumScore()-o2.getSumScore());
 				return flag;
 			}
 			
