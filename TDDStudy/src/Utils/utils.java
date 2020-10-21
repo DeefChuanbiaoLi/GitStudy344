@@ -9,16 +9,17 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-
-import MainPac.Read_Sort;
 import entity.Student;
 
-/**
- * @author ASUS-PC
- *
- */
-public class utils {
-	
+
+public class utils implements util_Interface{
+	util_Interface iu;
+	public util_Interface getIu() {
+		return iu;
+	}
+	public void setIu(util_Interface iu) {
+		this.iu = iu;
+	}
 		public List<Student> readData(){
 			List<Student> stus= new ArrayList<Student>(); 
 			try {
@@ -43,8 +44,6 @@ public class utils {
 		        				Double.parseDouble(sourceArray[6])));
 			            line = br.readLine(); // 一次读入一行数据
 			        }
-		        //}
-			
 		        	return stus;
 			}catch(Exception e) {
 				e.printStackTrace();

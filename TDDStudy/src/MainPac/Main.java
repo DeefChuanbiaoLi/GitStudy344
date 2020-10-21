@@ -1,63 +1,72 @@
 
 package MainPac;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
+import Utils.util_Interface;
 import Utils.utils;
 import entity.Student;
 
-/**
- * @author ASUS-PC
- *
- */
-public class Main {
-	Read_Sort_Interface si;
-	public Read_Sort_Interface getSi() {
-		return si;
+public class Main{
+	util_Interface util;
+	Sort_Interface sort;
+	AvgScore_Interface avg;
+	ArrayList<Student> stus;
+	FindeScore_Interface fin;
+	MaxScore_Interface max;
+	public FindeScore_Interface getFin() {
+		return fin;
 	}
-	public void setSi(Read_Sort_Interface si) {
-		this.si = si;
+	public void setFin(FindeScore_Interface fin) {
+		this.fin = fin;
 	}
-	/**
-	 * @param args
-	 */
+	public AvgScore_Interface getAvg() {
+		return avg;
+	}
+	public void setAvg(AvgScore_Interface avg) {
+		this.avg = avg;
+	}
+	public Sort_Interface getSort() {
+		return sort;
+	}
+	public void setSort(Sort_Interface sort) {
+		this.sort = sort;
+	}
+	public util_Interface getUtil() {
+		return util;
+	}
+	public void setUtil(util_Interface util) {
+		this.util = util;
+	}
+	
+	//运行过程
+	public void execute() {
+		//读取文件信息data.txt
+		stus = (ArrayList<Student>) util.readData();
+		//对学生信息排序
+		stus = sort.Sort(stus);
+		//求各科平均成绩
+		avg.getScore(stus);
+		//查找某个人的成绩
+		fin.findScoreByNam(stus);
+		//求各科最高分
+		max.MaxScore(stus);
+	}
+	
+	public MaxScore_Interface getMax() {
+		return max;
+	}
+	public void setMax(MaxScore_Interface max) {
+		this.max = max;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AvgScore_HigScore avg = new AvgScore_HigScore();
-		FindeSocre fin = new FindeSocre();
-		Read_Sort R = new Read_Sort();
-		utils u = new utils();
-		List<Student> stus= new ArrayList<Student>(); 
-		stus = u.readData();
-	        System.out.printf("学号\t\t姓名\t\t性别\t\t数学\t\t英语\t\t语文\t\t专业课\t\t总分\n");
-			for(Student s:(ArrayList<Student>)stus) {
-				//String s1=String.format("%4d",s.getEnglishScore());
-				System.out.printf("%d\t\t",s.getSid());
-				System.out.printf("%s\t\t",s.getName());
-				System.out.printf("%s\t\t",s.getGender());
-				System.out.printf("%s\t\t",s.getMathScore());
-				System.out.printf("%s\t\t",s.getEnglishScore());
-				System.out.printf("%s\t\t",s.getPoliticsScore());
-				System.out.printf("%s\t\t",s.getProfessionalScore());
-				System.out.printf("%s\t\t",s.getSumScore());
-				System.out.println();
-			}
-			ArrayList l = new ArrayList<Student>();
-			R.setSi(new Sort());
-			l = R.Read_Sort(stus);
-			avg.getScore(l);
-			Scanner in=new Scanner(System.in);
-			System.out.println("please enter name: ");
-			String a=in.nextLine();//这是输入5261a
-			fin.findScoreByNam(l, a);
-			//从这里添加代码
+		Main ma = new Main();
+		ma.setUtil(new utils());
+		ma.setSort(new Sort());
+		ma.setAvg(new AvgScore());
+		ma.setFin(new FindeSocre());
+		ma.setMax(new MaxScore());
+		ma.execute();
 			
-		
 	}
-
+	
 }

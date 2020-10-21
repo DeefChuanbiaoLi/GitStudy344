@@ -4,10 +4,10 @@
 package entity;
 
 /**
- * @author ASUS-PC
- *
+ * 学生实体类文件
  */
 public class Student {
+	
 	Integer Sid;
 	String name;
 	String gender;
@@ -82,7 +82,6 @@ public class Student {
 		}else {
 			this.gender = "不详";
 		}
-		
 		this.englishScore = englishScore;
 		this.mathScore = mathScore;
 		this.politicsScore = politicsScore;

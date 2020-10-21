@@ -25,12 +25,20 @@ public class Sort implements Sort_Interface{
 	@Override
 	public ArrayList<Student> Sort(ArrayList array) {
 		// TODO Auto-generated method stub
-//		Arrays.sort(array);
-//		int[] array_ret = new int[array.length];
-//		for(int i = 0;i<array.length;i++) {
-//			array_ret[i] =array[array.length-i-1];
-//		}
-
+		System.out.printf("排序前：\n");
+        System.out.printf("学号\t\t姓名\t\t性别\t\t数学\t\t英语\t\t语文\t\t专业课\t\t总分\n");
+		for(Student s:(ArrayList<Student>)array) {
+			//String s1=String.format("%4d",s.getEnglishScore());
+			System.out.printf("%d\t\t",s.getSid());
+			System.out.printf("%s\t\t",s.getName());
+			System.out.printf("%s\t\t",s.getGender());
+			System.out.printf("%s\t\t",s.getMathScore());
+			System.out.printf("%s\t\t",s.getEnglishScore());
+			System.out.printf("%s\t\t",s.getPoliticsScore());
+			System.out.printf("%s\t\t",s.getProfessionalScore());
+			System.out.printf("%s\t\t",s.getSumScore());
+			System.out.println();
+		}
 		Collections.sort(array,new Comparator<Student>() {
 
 			@Override
@@ -42,6 +50,7 @@ public class Sort implements Sort_Interface{
 			}
 			
 		});
+		System.out.printf("排序后：\n");
 		System.out.printf("学号\t\t姓名\t\t性别\t\t数学\t\t英语\t\t语文\t\t专业课\t\t总分\n");
 		for(Student s1:(ArrayList<Student>) array) {
 			//String s1=String.format("%4d",s.getEnglishScore());
