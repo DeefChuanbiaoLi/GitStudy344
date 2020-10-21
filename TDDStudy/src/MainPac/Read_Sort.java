@@ -1,23 +1,13 @@
-/**
- * 
- */
-package MainPac;
 
+package MainPac;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import entity.Student;
 
-/**
- * @author ASUS-PC
- *
- */
 public class Read_Sort implements Read_Sort_Interface{
 
-	/* (non-Javadoc)ASUS-PC上午10:08:51
-	 * @see main.Read_Sort_Interface#Read_Sort(java.util.ArrayList)
-	 */
 	Sort_Interface si;
 	
 	public void setSi(Sort_Interface si) {
@@ -33,7 +23,6 @@ public class Read_Sort implements Read_Sort_Interface{
 			list01.add(s);
 			System.out.println();
 		}
-		
 		return sort(list01);
 		
 	}

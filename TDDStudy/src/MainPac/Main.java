@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 import Utils.utils;
 import entity.Student;
 
@@ -26,7 +28,8 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		AvgScore_HigScore avg = new AvgScore_HigScore();
+		FindeSocre fin = new FindeSocre();
 		Read_Sort R = new Read_Sort();
 		utils u = new utils();
 		List<Student> stus= new ArrayList<Student>(); 
@@ -47,7 +50,11 @@ public class Main {
 			ArrayList l = new ArrayList<Student>();
 			R.setSi(new Sort());
 			l = R.Read_Sort(stus);
-			
+			avg.getScore(l);
+			Scanner in=new Scanner(System.in);
+			System.out.println("please enter name: ");
+			String a=in.nextLine();//这是输入5261a
+			fin.findScoreByNam(l, a);
 			//从这里添加代码
 			
 		
