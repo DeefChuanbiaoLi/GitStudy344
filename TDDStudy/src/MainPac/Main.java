@@ -1,6 +1,8 @@
 
 package MainPac;
 import java.util.ArrayList;
+import java.util.List;
+
 import Utils.util_Interface;
 import Utils.utils;
 import entity.Student;
@@ -38,7 +40,7 @@ public class Main{
 	}
 	
 	//运行过程
-	public void execute() {
+	public List<Student> execute() {
 		//读取文件信息data.txt
 		stus = (ArrayList<Student>) util.readData();
 		//对学生信息排序
@@ -49,6 +51,7 @@ public class Main{
 		fin.findScoreByNam(stus);
 		//求各科最高分
 		max.MaxScore(stus);
+		return stus;
 	}
 	
 	public MaxScore_Interface getMax() {

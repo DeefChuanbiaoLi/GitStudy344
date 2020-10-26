@@ -1,19 +1,16 @@
-/**
- * 
- */
+
 package test;
-
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import MainPac.AvgScore;
 import MainPac.AvgScore_Interface;
 import MainPac.FindeScore_Interface;
+import MainPac.FindeSocre;
 import MainPac.Main;
+import MainPac.MaxScore;
 import MainPac.MaxScore_Interface;
 import MainPac.Sort;
 import MainPac.Sort_Interface;
@@ -21,17 +18,13 @@ import Utils.util_Interface;
 import Utils.utils;
 import entity.Student;
 
-/**
- * @author ASUS-PC
- *
- */
 public class test_01 {
 	util_Interface util;
 	Sort_Interface sort;
 	AvgScore_Interface avg;
-	ArrayList<Student> stus;
 	FindeScore_Interface fin;
 	MaxScore_Interface max;
+	List<Student> stus;
 	public FindeScore_Interface getFin() {
 		return fin;
 	}
@@ -60,14 +53,15 @@ public class test_01 {
 	double b[]  = new double[4];
 	@Test
 	public void test_Sort(){
-		test_01 ma = new test_01();
+		//test_01 ma = new test_01();
+		//ma.setUtil(new utils());
+		//ma.setSort(new Sort());
+		Main ma = new Main();
 		ma.setUtil(new utils());
+		stus = ma.getUtil().readData();
 		ma.setSort(new Sort());
-		stus = (ArrayList<Student>) util.readData();
-		stus = sort.Sort(stus);
-		
+		stus = ma.getSort().Sort((ArrayList<Student>) stus);
 		ArrayList l = new ArrayList<Student>();
-		
 		double a[] = {178.0,178.0,184.0,257.0};
 		Student s1 = new Student();
 		for(int i = 0;i<stus.size();i++) {
@@ -89,7 +83,6 @@ public class test_01 {
 			Student s = l.get(i);
 			b[i] = s.getSumScore();
 		}
-		
 		for(int i = 0;i<l.size();i++) {
 			//assertArrayEquals(a[i],b[i]);
 		}
