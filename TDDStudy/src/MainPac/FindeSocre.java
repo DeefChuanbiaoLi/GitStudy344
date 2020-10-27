@@ -22,7 +22,7 @@ public class FindeSocre implements FindeScore_Interface{
 			return;
 		}
 		String name = list.get(0).getName();
-		for(i=0;i<list.size();i++) {
+		for(i=0;i<=list.size();i++) {
 			name = list.get(i).getName();
 			if(name.equals(a)) {
 				s = list.get(i);
