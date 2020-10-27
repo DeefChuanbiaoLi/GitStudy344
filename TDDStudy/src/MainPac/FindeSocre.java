@@ -14,9 +14,11 @@ public class FindeSocre implements FindeScore_Interface{
 		int i;
 		s = null;
 		//System.out.printf("%s", list.get(1).getEnglishScore());
+		
 		Scanner in=new Scanner(System.in);
 		System.out.println("请输入姓名: ");
 		String a=in.nextLine();//这是输入5261a
+		
 		if(a.equals("")) {
 			System.out.println("！");
 			return;

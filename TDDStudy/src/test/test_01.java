@@ -4,13 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
-import MainPac.AvgScore;
 import MainPac.AvgScore_Interface;
 import MainPac.FindeScore_Interface;
-import MainPac.FindeSocre;
 import MainPac.Main;
-import MainPac.MaxScore;
 import MainPac.MaxScore_Interface;
 import MainPac.Sort;
 import MainPac.Sort_Interface;

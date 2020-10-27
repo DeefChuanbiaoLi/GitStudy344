@@ -3,6 +3,8 @@ package MainPac;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.easymock.EasyMock;
+
 import Utils.util_Interface;
 import Utils.utils;
 import entity.Student;
@@ -63,11 +65,15 @@ public class Main{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Main ma = new Main();
+//		utils userInfoExpertService = EasyMock.createMock(Utils.utils.class);
+//		EasyMock.expect(Utils.utils.class).andThrow(new Exception());
+//		EasyMock.replay(userInfoExpertService);
 		ma.setUtil(new utils());
 		ma.setSort(new Sort());
 		ma.setAvg(new AvgScore());
 		ma.setFin(new FindeSocre());
 		ma.setMax(new MaxScore());
+		
 		ma.execute();
 			
 	}
