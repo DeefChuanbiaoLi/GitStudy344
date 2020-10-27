@@ -12,6 +12,7 @@ import entity.Student;
  * @author ASUS-PC
  *
  */
-public interface Sort_Interface {
+public abstract class Sort_Interface {
 	public abstract ArrayList<Student> Sort(ArrayList<Student> array);
+	
 }

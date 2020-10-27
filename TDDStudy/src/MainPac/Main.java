@@ -38,7 +38,7 @@ public class Main{
 	public void setUtil(util_Interface util) {
 		this.util = util;
 	}
-	
+
 	//运行过程
 	public List<Student> execute() {
 		//读取文件信息data.txt
@@ -47,10 +47,10 @@ public class Main{
 		stus = sort.Sort(stus);
 		//求各科平均成绩
 		avg.getScore(stus);
-		//查找某个人的成绩
-		fin.findScoreByNam(stus);
 		//求各科最高分
 		max.MaxScore(stus);
+		//查找某个人的成绩
+		fin.findScoreByNam(stus);
 		return stus;
 	}
 	

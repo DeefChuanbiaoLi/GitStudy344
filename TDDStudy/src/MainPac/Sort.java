@@ -17,7 +17,7 @@ import entity.Student;
  * @author ASUS-PC
  *
  */
-public class Sort implements Sort_Interface{
+public class Sort extends Sort_Interface{
 
 	/* (non-Javadoc)ASUS-PC上午10:27:48
 	 * @see main.Sort_Interface#Sort()
@@ -50,7 +50,7 @@ public class Sort implements Sort_Interface{
 			}
 			
 		});
-		System.out.printf("排序后：\n");
+		System.out.printf("总分排序：\n");
 		System.out.printf("学号\t\t姓名\t\t性别\t\t数学\t\t英语\t\t语文\t\t专业课\t\t总分\n");
 		for(Student s1:(ArrayList<Student>) array) {
 			//String s1=String.format("%4d",s.getEnglishScore());
